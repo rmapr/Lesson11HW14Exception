@@ -35,6 +35,11 @@ public class Main {
                 System.out.println("Сума всіх чисел масиву дорівнює: " + sumArray);
             } catch (ArraySizeException | ArrayDataException exception) {
                 System.out.println(exception.getMessage());
+            } finally {
+                System.out.println("А чи можна при ArrayDataException на місце невірного " +
+                        "значення ввести нове через Сканер і заново запустити? Я думав блок try взяти в " +
+                        "цикл while з boolean змінною. Намагався, зайшов в куток, залишив, " +
+                        "ще не достатньо знань.");
             }
     }
 }
