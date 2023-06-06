@@ -1,9 +1,12 @@
-package Exception;
+package run;
+
+import exception.ArrayDataException;
+import exception.ArraySizeException;
 
 public class Main {
     public static void main(String[] args)  {
         ArrayValueCalculator arrayValueCalculator = new ArrayValueCalculator();
-        String[][] strings = new String[5][5]; //Повинно 4х4
+        String[][] strings = new String[4][4]; //Повинно 4х4
         strings[0][0] ="1";
         strings[0][1] ="2";
         strings[0][2] ="3";
@@ -19,27 +22,27 @@ public class Main {
         strings[3][0] ="13";
         strings[3][1] ="14";
         strings[3][2] ="15";
-        strings[3][3] ="1w6";// невірне значення
+        strings[3][3] ="16";// невірне значення
 //Для перевірки ArrayDataException закоментувати нижче 9 рядків і виправити розмірність на 4х4)
-        strings[4][0] ="17";
-        strings[4][1] ="18";
-        strings[4][2] ="19";
-        strings[4][3] ="20";
-        strings[4][4] ="21";
-        strings[0][4] ="22";
-        strings[1][4] ="23";
-        strings[2][4] ="24";
-        strings[3][4] ="25";
+//        strings[4][0] ="17";
+//        strings[4][1] ="18";
+//        strings[4][2] ="19";
+//        strings[4][3] ="20";
+//        strings[4][4] ="21";
+//        strings[0][4] ="22";
+//        strings[1][4] ="23";
+//        strings[2][4] ="24";
+//        strings[3][4] ="25";
             try {
                 int sumArray = arrayValueCalculator.doCalc(strings);
                 System.out.println("Сума всіх чисел масиву дорівнює: " + sumArray);
             } catch (ArraySizeException | ArrayDataException exception) {
                 System.out.println(exception.getMessage());
-            } finally {
+            } /*finally {
                 System.out.println("А чи можна при ArrayDataException на місце невірного " +
                         "значення ввести нове через Сканер і заново запустити? Я думав блок try взяти в " +
                         "цикл while з boolean змінною. Намагався, зайшов в куток, залишив, " +
                         "ще не достатньо знань.");
-            }
+            }*/
     }
 }

@@ -1,4 +1,7 @@
-package Exception;
+package run;
+
+import exception.ArrayDataException;
+import exception.ArraySizeException;
 
 public class ArrayValueCalculator {
     public int doCalc(String[][] strArrayToInt) throws ArraySizeException, ArrayDataException {
